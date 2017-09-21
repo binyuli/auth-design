@@ -341,11 +341,17 @@ paths:
             properties:
               name: 
                 type: string
-              permissions:
+              operations:
                 type: array
                 items:
                   type: string
-                  description: 权限Id
+                  description: 业务操作Id
+              pages:
+                type: array
+                description: 可访问的页面
+                items:
+                  type: string
+                  description: 页面Id
       responses:
         201:
           description: Created
@@ -369,11 +375,17 @@ paths:
             properties:
               name: 
                 type: string
-              permissions:
+              operations:
                 type: array
                 items:
                   type: string
-                  description: 权限Id
+                  description: 业务操作Id
+              pages:
+                type: array
+                description: 可访问的页面
+                items:
+                  type: string
+                  description: 页面Id
       responses:
         200:
           description: OK
@@ -429,7 +441,7 @@ paths:
                                 type: string
                               name:
                                 type: string
-                              permissions:
+                              operations:
                                 type: array
                                 items:
                                   $ref: '#/definitions/Permission'
