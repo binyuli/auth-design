@@ -171,6 +171,14 @@ paths:
                                     type: string
                                   name:
                                     type: string 
+                            options:
+                              type: array
+                              items:
+                                type: string
+                                description: &user-options-description |
+                                  editable    - 是否可编辑
+                                  disableOrEnable - 是否可冻结或解冻
+                              enum: ["editable","disableOrEnable"]
                   - $ref: '#/definitions/Paging'
     post:
       summary: 新增用户
@@ -243,6 +251,14 @@ paths:
                           type: string
                         name: 
                           type: string
+                  options:
+                      type: array
+                      items:
+                        type: string
+                        description: &user-options-description |
+                          editable    - 是否可编辑
+                          disableOrEnable - 是否可冻结或解冻
+                      enum: ["editable","disableOrEnable"]
     put:
       summary: 修改
       tags:
@@ -327,6 +343,14 @@ paths:
                       type: string
                     name:
                       type: string
+                    options:
+                      type: array
+                      items:
+                        type: string
+                        description: &role-options-description |
+                          editable    - 是否可编辑
+                          abandonable - 是否可作废
+                      enum: ["editable","abandonable"]
     post:
       summary: 新增角色
       tags:
@@ -420,6 +444,14 @@ paths:
                   name:
                     type: string
                     description: 角色名
+                  options:
+                    type: array
+                    items:
+                      type: string
+                      description: &role-options-description |
+                        editable    - 是否可编辑
+                        abandonable - 是否可作废
+                    enum: ["editable","abandonable"]
                   permissions:
                     description: 角色对应的权限，为了方便在界面展示，以page层次结构返回
                     type: array
