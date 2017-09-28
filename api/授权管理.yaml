@@ -121,9 +121,12 @@ paths:
           type: string
           in: query
           description: 用户名
-        - name: roleId
-          type: string
-          in: query
+        - in: query 
+          name: roleId
+          type: array
+          items:
+            type: string
+          collectionFormat: pipes
           description: 角色Id
         - $ref: '#/parameters/PageSize'
         - $ref: '#/parameters/PageIndex'
