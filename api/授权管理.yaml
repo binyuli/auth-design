@@ -66,7 +66,7 @@ paths:
                       type: string
                       description: 标题
                     url:
-                      type: string 
+                      type: string
                     items:
                       type: array
                       items:
@@ -82,7 +82,7 @@ paths:
                           title:
                             type: string
                           url:
-                            type: string 
+                            type: string
   /users/me/pages/{id}:
     get:
       summary: 获取指定页当前用户的权限
@@ -121,7 +121,7 @@ paths:
           type: string
           in: query
           description: 用户名
-        - in: query 
+        - in: query
           name: roleId
           type: array
           items:
@@ -146,7 +146,7 @@ paths:
                 type: object
                 allOf:
                   - type: object
-                    required: 
+                    required:
                       - content
                     properties:
                       content:
@@ -158,7 +158,7 @@ paths:
                           properties:
                             id:
                               type: string
-                            name: 
+                            name:
                               type: string
                             username:
                               type: string
@@ -170,10 +170,10 @@ paths:
                               items:
                                 type: object
                                 properties:
-                                  id: 
+                                  id:
                                     type: string
                                   name:
-                                    type: string 
+                                    type: string
                             options:
                               type: array
                               items:
@@ -193,7 +193,7 @@ paths:
           description: 用户信息
           schema:
             type: object
-            required: 
+            required:
               - name
             properties:
               name:
@@ -206,7 +206,7 @@ paths:
                 type: array
                 items:
                   type: string
-                  description: 角色Id  
+                  description: 角色Id
       responses:
         201:
           description: Created
@@ -238,7 +238,7 @@ paths:
                 properties:
                   id:
                     type: string
-                  name: 
+                  name:
                     type: string
                   username:
                     type: string
@@ -247,12 +247,12 @@ paths:
                     description: 状态
                   roles:
                     type: array
-                    items: 
+                    items:
                       type: object
                       properties:
                         id:
                           type: string
-                        name: 
+                        name:
                           type: string
                   options:
                       type: array
@@ -277,8 +277,8 @@ paths:
           description: 用户信息
           required: true
           schema:
-            type: object 
-            required: 
+            type: object
+            required:
               - name
             properties:
               name:
@@ -287,7 +287,7 @@ paths:
                 type: array
                 items:
                   type: string
-                  description: 角色id  
+                  description: 角色id
       responses:
         200:
           description: OK
@@ -366,7 +366,7 @@ paths:
           schema:
             type: object
             properties:
-              name: 
+              name:
                 type: string
               operations:
                 type: array
@@ -384,7 +384,7 @@ paths:
           description: Created
   /roles/{id}:
     put:
-      summary: 修改角色
+      summary: 修改角色权限
       tags:
         - roles
       parameters:
@@ -400,8 +400,6 @@ paths:
           schema:
             type: object
             properties:
-              name: 
-                type: string
               operations:
                 type: array
                 items:
@@ -434,7 +432,7 @@ paths:
             required:
               - payload
             properties:
-              message: 
+              message:
                 type: string
               payload:
                 type: object
@@ -472,7 +470,7 @@ paths:
                           type: array
                           items:
                             properties:
-                              id: 
+                              id:
                                 type: string
                               name:
                                 type: string
@@ -480,6 +478,30 @@ paths:
                                 type: array
                                 items:
                                   $ref: '#/definitions/Permission'
+  /roles/{id}/name:
+    put:
+      summary: 修改角色名称
+      tags:
+        - roles
+      parameters:
+        - in: path
+          name: id
+          description: 角色id
+          required: true
+          type: string
+        - in: body
+          name: role
+          description: 角色
+          required: true
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+                description: 角色名称
+      responses:
+        200:
+          description: OK
   /roles/{id}/abandon:
     put:
       summary: 作废角色
