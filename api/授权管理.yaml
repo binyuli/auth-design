@@ -384,7 +384,7 @@ paths:
           description: Created
   /roles/{id}:
     put:
-      summary: 修改角色权限
+      summary: 修改角色
       tags:
         - roles
       parameters:
@@ -400,6 +400,9 @@ paths:
           schema:
             type: object
             properties:
+              name:
+                type: string
+                description: 角色名称
               operations:
                 type: array
                 items:
@@ -478,9 +481,9 @@ paths:
                                 type: array
                                 items:
                                   $ref: '#/definitions/Permission'
-  /roles/{id}/name:
+  /roles/{id}/info:
     put:
-      summary: 修改角色名称
+      summary: 修改角色权限以外的信息
       tags:
         - roles
       parameters:
