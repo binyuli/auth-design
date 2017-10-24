@@ -164,7 +164,10 @@ paths:
                               type: string
                             status:
                               type: integer
-                              description: 状态
+                              description: &user-status-description |
+                                1 - 新建
+                                2 - 冻结
+                              enum: [1, 2]
                             roles:
                               type: array
                               items:
@@ -324,6 +327,16 @@ paths:
       summary: 获取角色列表
       tags:
         - roles
+      parameters:
+        - in: query
+          name: status
+          type: integer
+          required: true
+          description: &role-status-description |
+            0 - 有效
+            1 - 作废
+          enum: [0, 1]
+          default: 0
       responses:
         200:
           description: 角色列表
@@ -403,6 +416,9 @@ paths:
               name:
                 type: string
                 description: 角色名称
+              status:
+                type: integer
+                description: 角色状态
               operations:
                 type: array
                 items:
