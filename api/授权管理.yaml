@@ -128,6 +128,13 @@ paths:
             type: string
           collectionFormat: pipes
           description: 角色Id
+        - in: query
+          name: status
+          type: integer
+          description: &user-status-description |
+            0 - 冻结
+            1 - 新建
+          enum: [0, 1]
         - $ref: '#/parameters/PageSize'
         - $ref: '#/parameters/PageIndex'
         - $ref: '#/parameters/SortField'
@@ -165,9 +172,9 @@ paths:
                             status:
                               type: integer
                               description: &user-status-description |
+                                0 - 冻结
                                 1 - 新建
-                                2 - 冻结
-                              enum: [1, 2]
+                              enum: [0, 1]
                             roles:
                               type: array
                               items:
@@ -198,6 +205,8 @@ paths:
             type: object
             required:
               - name
+              - username
+              - password
             properties:
               name:
                 type: string
