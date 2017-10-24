@@ -133,8 +133,8 @@ paths:
           type: integer
           description: &user-status-description |
             0 - 冻结
-            1 - 新建
-          enum: [0, 1]
+            2 - 有效
+          enum: [0, 2]
         - $ref: '#/parameters/PageSize'
         - $ref: '#/parameters/PageIndex'
         - $ref: '#/parameters/SortField'
@@ -173,8 +173,8 @@ paths:
                               type: integer
                               description: &user-status-description |
                                 0 - 冻结
-                                1 - 新建
-                              enum: [0, 1]
+                                2 - 有效
+                              enum: [0, 2]
                             roles:
                               type: array
                               items:
@@ -342,10 +342,9 @@ paths:
           type: integer
           required: true
           description: &role-status-description |
-            0 - 有效
-            1 - 作废
-          enum: [0, 1]
-          default: 0
+            0 - 作废
+            2 - 有效
+          enum: [0, 2]
       responses:
         200:
           description: 角色列表
