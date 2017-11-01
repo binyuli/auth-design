@@ -340,7 +340,6 @@ paths:
         - in: query
           name: status
           type: integer
-          required: true
           description: &role-status-description |
             0 - 作废
             2 - 有效
