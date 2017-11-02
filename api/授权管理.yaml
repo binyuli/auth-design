@@ -334,6 +334,7 @@ paths:
   /roles:
     get:
       summary: 获取角色列表
+      description: status为空时，后端默认返回status为有效的角色列表
       tags:
         - roles
       parameters:
