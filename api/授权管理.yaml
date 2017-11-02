@@ -424,9 +424,6 @@ paths:
               name:
                 type: string
                 description: 角色名称
-              status:
-                type: integer
-                description: 角色状态
               operations:
                 type: array
                 items:
