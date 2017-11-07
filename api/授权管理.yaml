@@ -189,9 +189,10 @@ paths:
                               items:
                                 type: string
                                 description: &user-options-description |
-                                  editable    - 是否可编辑
-                                  disableOrEnable - 是否可冻结或解冻
-                              enum: ["editable","disableOrEnable"]
+                                  editable  - 是否可编辑
+                                  disable   - 是否可冻结
+                                  enable    - 是否可解冻
+                              enum: ["editable","disable","enable"]
                   - $ref: '#/definitions/Paging'
     post:
       summary: 新增用户
