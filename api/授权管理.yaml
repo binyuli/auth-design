@@ -268,13 +268,14 @@ paths:
                         name:
                           type: string
                   options:
-                      type: array
-                      items:
-                        type: string
-                        description: &user-options-description |
-                          editable    - 是否可编辑
-                          disableOrEnable - 是否可冻结或解冻
-                      enum: ["editable","disableOrEnable"]
+                    type: array
+                    items:
+                      type: string
+                      description: &user-options-description |
+                        editable  - 是否可编辑
+                        disable   - 是否可冻结
+                        enable    - 是否可解冻
+                    enum: ["editable","disable","enable"]
     put:
       summary: 修改
       tags:
