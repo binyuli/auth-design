@@ -65,6 +65,12 @@ paths:
                     title:
                       type: string
                       description: 标题
+                    pinyin:
+                      type: string
+                      description: 标题的拼音
+                    initial:
+                      type: string
+                      description: 标题的拼音首字母
                     url:
                       type: string
                     items:
@@ -81,6 +87,12 @@ paths:
                             type: string
                           title:
                             type: string
+                          pinyin:
+                            type: string
+                            description: 标题的拼音
+                          initial:
+                            type: string
+                            description: 标题的拼音首字母
                           url:
                             type: string
   /users/me/pages/{id}:
