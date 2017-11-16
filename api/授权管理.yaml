@@ -81,8 +81,6 @@ paths:
                           - id
                           - title
                         properties:
-                          id:
-                            type: string
                           icon:
                             type: string
                           title:
@@ -95,17 +93,17 @@ paths:
                             description: 标题的拼音首字母
                           url:
                             type: string
-  /users/me/pages/{id}:
+  /users/me/pages/{code}:
     get:
       summary: 获取指定页当前用户的权限
       tags:
         - pages
       parameters:
         - in: path
-          name: id
+          name: code
           required: true
           type: string
-          description: 页面id
+          description: 页面code
       responses:
         200:
           description: OK
