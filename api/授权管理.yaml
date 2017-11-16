@@ -53,12 +53,8 @@ paths:
                 items:
                   type: object
                   required:
-                    - id
                     - title
                   properties:
-                    id:
-                      type: string
-                      description: pageId
                     icon:
                       type: string
                       description: 图标
@@ -78,7 +74,6 @@ paths:
                       items:
                         type: object
                         required:
-                          - id
                           - title
                         properties:
                           icon:
