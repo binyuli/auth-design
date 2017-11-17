@@ -54,7 +54,6 @@ paths:
                   - id
                   - name
                   - username
-                  - enterpriseId
                   - enterpriseName
                   - roles
                 properties:
