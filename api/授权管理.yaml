@@ -37,7 +37,7 @@ paths:
     get:
       summary: 获取当前登录用户的信息
       tags:
-        - pages
+        - currentUser
       responses:
         200:
           description: 用户信息
@@ -67,26 +67,19 @@ paths:
                   username:
                     type: string
                     description: 账户
-                  enterpriseId:
-                    type: string
-                    description: 企业Id
                   enterpriseName:
                     type: string
                     description: 企业名称
                   roles:
                     type: array
+                    description: 角色名称
                     items:
-                      type: object
-                      properties:
-                        id:
-                          type: string
-                        name:
-                          type: string
+                      type: string    
   /users/me/pages:
     get:
       summary: 获取当前用户可访问的菜单项
       tags:
-        - pages
+        - currentUser
       responses:
         200:
           description: 成功返回用户可访问的菜单项
@@ -141,7 +134,7 @@ paths:
     get:
       summary: 获取指定页当前用户的权限
       tags:
-        - pages
+        - currentUser
       parameters:
         - in: path
           name: code
