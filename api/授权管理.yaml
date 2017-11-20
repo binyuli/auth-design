@@ -62,10 +62,10 @@ paths:
                     description: 用户Id
                   name:
                     type: string
-                    description: 用户姓名
+                    description: 姓名
                   username:
                     type: string
-                    description: 账户
+                    description: 用户名
                   enterpriseName:
                     type: string
                     description: 企业名称
