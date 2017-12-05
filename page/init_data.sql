@@ -16,8 +16,8 @@ SET @enterprise_id = '786b67b6-b424-11e7-b9e5-005056af50a8';
 -- 页面数据
 INSERT INTO `page`(id, CODE, NAME, pinyin, initial, url, icon, weight, LEVEL, parent_id, enterprise_id) VALUES
 ('07b70b41-d718-424a-b481-545d61509427', 'auth', '授权管理', 'shouquanguanli', 'sqgl', NULL, NULL, '1', '0', NULL, @enterprise_id),
-('a305284a-cc47-4064-906f-f16fc07c3310', 'auth-user', '用户管理', 'yonghuguanli', 'yhgl', '/auth/user', NULL, '1', '1', '07b70b41-d718-424a-b481-545d61509427', @enterprise_id),
-('a10e57aa-00e6-4391-b708-87b4c45f3387', 'auth-role', '角色管理', 'jueseguanli', 'jsgl', '/auth/role', NULL, '2', '1', '07b70b41-d718-424a-b481-545d61509427', @enterprise_id);
+('a305284a-cc47-4064-906f-f16fc07c3310', 'auth-user', '用户管理', 'yonghuguanli', 'yhgl', '/auth/user/', NULL, '1', '1', '07b70b41-d718-424a-b481-545d61509427', @enterprise_id),
+('a10e57aa-00e6-4391-b708-87b4c45f3387', 'auth-role', '角色管理', 'jueseguanli', 'jsgl', '/auth/role/', NULL, '2', '1', '07b70b41-d718-424a-b481-545d61509427', @enterprise_id);
 
 -- 操作数据
 INSERT INTO `operation`(id, CODE, NAME, page_id, enterprise_id) VALUES
