@@ -11,8 +11,9 @@ produces:
   - application/json
 paths:
   /auth:
-    post:
+    get:
       summary: api访问权限校验
+      description: 该api支持POST，PUT，DELETE，GET等httpMehod方法
       tags:
         - auth
       parameters:
