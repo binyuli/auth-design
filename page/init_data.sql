@@ -29,24 +29,24 @@ INSERT INTO `operation`(id, CODE, NAME, page_id) VALUES
 
 -- api
 INSERT INTO `api`(id, NAME, http_method, url) VALUES
-('122f3e34-42c4-4b3d-b6c7-cd7758e98ad0', '获取角色列表', 'GET', '/roles'),
-('5bef679f-6720-4a21-9053-57c73df50fcc', '新增角色', 'POST', '/roles'),
-('f2aabcd8-6487-4d1a-8ca9-3f8638486655', '修改角色', 'PUT', '/roles/[0-9a-z-A-Z]+'),
-('e61b75d0-6f84-4f06-9167-de45eb2c46c0', '获取角色详情', 'GET', '/roles/[0-9a-z-A-Z]+'),
-('a7c50896-c1e2-4e65-a495-fc5cfbdece8e', '修改角色权限以外的信息', 'PUT', '/roles/[0-9a-z-A-Z]+/info'),
-('8c68283c-651a-4e07-978f-e41c0beb1dff', '作废角色', 'PUT', '/roles/[0-9a-z-A-Z]+/abandon'),
-('2caf2455-5c3c-4f15-8364-ec8a4d16da58', '获取page列表', 'GET', '/pages'),
-('2ac0a6d5-f280-45f4-b61d-f1fbe531b694', '获取page详情', 'GET', '/pages/[0-9a-z-A-Z]+'),
-('bec0b4af-6f7a-4de7-8c0f-365e18c9e80b', '根据条件查询用户信息', 'GET', '/users'),
-('fe82e193-2f46-4377-86ab-7b90b28d8a3e', '新增用户', 'POST', '/users'),
-('9f19d4e0-bc7d-4116-9645-47dab1a0f419', '用户详细信息', 'GET', '/users/[0-9a-z-A-Z]+'),
-('8f245434-0e90-4ff7-9198-8832313ffb62', '修改用户信息', 'PUT', '/users/[0-9a-z-A-Z]+'),
-('5f3ae617-a1ff-4052-858a-58f65171bbeb', '冻结用户', 'PUT', '/users/[0-9a-z-A-Z]+/disable'),
-('0d0f8b8c-2adb-4d58-8b31-a8dd77b9e909', '解冻用户', 'PUT', '/users/[0-9a-z-A-Z]+/enable'),
-('fcfb995e-deeb-11e7-a6ed-00e04c368b96', '获取当前用户信息', 'GET', '/users/me'),
-('f02caa0e-4bba-42d0-aa1e-48c0c9c4eacf', '获取当前用户可访问的菜单项', 'GET', '/users/me/pages'),
-('a40194b7-7492-45e8-92d5-e600e5e98d8c', '获取指定页当前用户的权限', 'GET', '/users/me/pages/[0-9a-z-A-Z]+'),
-('fad44448-e077-11e7-b4fe-005056b56136', '注销', 'POST', '/logout');
+('122f3e34-42c4-4b3d-b6c7-cd7758e98ad0', '获取角色列表', 'GET', '/api/v1/roles'),
+('5bef679f-6720-4a21-9053-57c73df50fcc', '新增角色', 'POST', '/api/v1/roles'),
+('f2aabcd8-6487-4d1a-8ca9-3f8638486655', '修改角色', 'PUT', '/api/v1/roles/[0-9a-z-A-Z]+'),
+('e61b75d0-6f84-4f06-9167-de45eb2c46c0', '获取角色详情', 'GET', '/api/v1/roles/[0-9a-z-A-Z]+'),
+('a7c50896-c1e2-4e65-a495-fc5cfbdece8e', '修改角色权限以外的信息', 'PUT', '/api/v1/roles/[0-9a-z-A-Z]+/info'),
+('8c68283c-651a-4e07-978f-e41c0beb1dff', '作废角色', 'PUT', '/api/v1/roles/[0-9a-z-A-Z]+/abandon'),
+('2caf2455-5c3c-4f15-8364-ec8a4d16da58', '获取page列表', 'GET', '/api/v1/pages'),
+('2ac0a6d5-f280-45f4-b61d-f1fbe531b694', '获取page详情', 'GET', '/api/v1/pages/[0-9a-z-A-Z]+'),
+('bec0b4af-6f7a-4de7-8c0f-365e18c9e80b', '根据条件查询用户信息', 'GET', '/api/v1/users'),
+('fe82e193-2f46-4377-86ab-7b90b28d8a3e', '新增用户', 'POST', '/api/v1/users'),
+('9f19d4e0-bc7d-4116-9645-47dab1a0f419', '用户详细信息', 'GET', '/api/v1/users/[0-9a-z-A-Z]+'),
+('8f245434-0e90-4ff7-9198-8832313ffb62', '修改用户信息', 'PUT', '/api/v1/users/[0-9a-z-A-Z]+'),
+('5f3ae617-a1ff-4052-858a-58f65171bbeb', '冻结用户', 'PUT', '/api/v1/users/[0-9a-z-A-Z]+/disable'),
+('0d0f8b8c-2adb-4d58-8b31-a8dd77b9e909', '解冻用户', 'PUT', '/api/v1/users/[0-9a-z-A-Z]+/enable'),
+('fcfb995e-deeb-11e7-a6ed-00e04c368b96', '获取当前用户信息', 'GET', '/api/v1/users/me'),
+('f02caa0e-4bba-42d0-aa1e-48c0c9c4eacf', '获取当前用户可访问的菜单项', 'GET', '/api/v1/users/me/pages'),
+('a40194b7-7492-45e8-92d5-e600e5e98d8c', '获取指定页当前用户的权限', 'GET', '/api/v1/users/me/pages/[0-9a-z-A-Z]+'),
+('fad44448-e077-11e7-b4fe-005056b56136', '注销', 'POST', '/api/v1/logout');
 
 -- 页面 api 关系
 INSERT INTO `page_api`(page_id, api_id) VALUES
