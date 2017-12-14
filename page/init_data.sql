@@ -4,6 +4,7 @@ TRUNCATE TABLE api;
 TRUNCATE TABLE operation;
 TRUNCATE TABLE operation_api;
 TRUNCATE TABLE page_api;
+TRUNCATE TABLE white_list;
 TRUNCATE TABLE `user`;
 TRUNCATE TABLE role;
 TRUNCATE TABLE user_role;
@@ -44,7 +45,8 @@ INSERT INTO `api`(id, NAME, http_method, url) VALUES
 ('0d0f8b8c-2adb-4d58-8b31-a8dd77b9e909', '解冻用户', 'PUT', '/users/[0-9a-z-A-Z]+/enable'),
 ('fcfb995e-deeb-11e7-a6ed-00e04c368b96', '获取当前用户信息', 'GET', '/users/me'),
 ('f02caa0e-4bba-42d0-aa1e-48c0c9c4eacf', '获取当前用户可访问的菜单项', 'GET', '/users/me/pages'),
-('a40194b7-7492-45e8-92d5-e600e5e98d8c', '获取指定页当前用户的权限', 'GET', '/users/me/pages/[0-9a-z-A-Z]+');
+('a40194b7-7492-45e8-92d5-e600e5e98d8c', '获取指定页当前用户的权限', 'GET', '/users/me/pages/[0-9a-z-A-Z]+'),
+('fad44448-e077-11e7-b4fe-005056b56136', '注销', 'POST', '/logout');
 
 -- 页面 api 关系
 INSERT INTO `page_api`(page_id, api_id) VALUES
@@ -70,7 +72,8 @@ INSERT INTO `operation_api`(operation_id, api_id) VALUES
 INSERT INTO `white_list` (api_id) VALUES
 ('fcfb995e-deeb-11e7-a6ed-00e04c368b96'),
 ('f02caa0e-4bba-42d0-aa1e-48c0c9c4eacf'),
-('a40194b7-7492-45e8-92d5-e600e5e98d8c');
+('a40194b7-7492-45e8-92d5-e600e5e98d8c'),
+('fad44448-e077-11e7-b4fe-005056b56136');
 
 SET @enterprise_id = '786b67b6-b424-11e7-b9e5-005056af50a8';
 SET @creator_name = 'sql_import';
